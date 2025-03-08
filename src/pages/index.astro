@@ -1,11 +1,142 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import CopyCode from "../components/CopyCode.svelte";
+import Icon from "../components/Icon.svelte";
+import { Constants } from "../utils/constants";
 ---
 
 <Layout>
-	<Welcome />
+  <header class="text-center mb-20 relative">
+    <a href={Constants.GITHUB} class="absolute right-0 top-0"
+      ><img src="/images/github-corner.svg" alt="GitHub" /></a
+    >
+    <h2 class="font-sans font-black text-4xl text-turbo uppercase py-4">
+      (What The OTF)
+    </h2>
+    <div class="relative inline-block">
+      <img src="/images/scribble--left.png" alt="scribble" class="absolute -left-[300px] top-[45px]" />
+      <h1 class="mb-5 inline-block">
+        <img src="/images/logo.svg" alt="WTOTF" class="mx-auto" />
+      </h1>
+      <img src="/images/astrix.svg" alt="*" class="absolute -right-[125px] -top-[25px]" />
+      <img src="/images/yellow-flower--right.svg" alt="yellow flower" class="absolute -right-[250px] -bottom-[100px]" />
+    </div>
+    <h3 class="font-sans font-black text-xl uppercase text-white">
+      A <span class="text-turbo">COMMAND LINE TOOL</span> FOR CONVERTING A <span
+        class="text-turbo">OTF</span
+      > TO A <span class="text-turbo">WOFF</span> AND <span class="text-turbo"
+        >WOFF2</span
+      > FILES
+    </h3>
+  </header>
+
+  <!-- copy code -->
+  <section class="mb-[100px]">
+    <CopyCode code="npm install wtotf" client:load="svelte" />
+    <div class="flex items-center justify-center gap-4 relative -right-[50px]">
+      <div>
+        <img
+          src="/images/code.png"
+          srcset="/images/code@2x.png 2x, /images/code.png 1x"
+          alt=""
+        />
+      </div>
+      <div class="relative -top-[50px] hidden md:block pointer-events-none">
+        <img
+          src="/images/good-vibes.png"
+          srcset="/images/good-vibes@2x.png 2x, /images/good-vibes.png 1x"
+          alt="Good Vibes"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- newsletter -->
+  <section class="grid grid-cols-[auto_350px_430px_auto] gap-x-[40px]">
+    <div class="col-span-3 col-start-2">
+      <h2 class="font-sans font-black text-turbo uppercase text-[40px] mb-6">
+        Looking for More Tools Like This?
+      </h2>
+    </div>
+    <div class="flex justify-end">
+      <div class="relative">
+        <img src="/images/yellow-flower--left.svg" alt="yellow flower" class="absolute -left-[75px] -top-[300px]" />
+        <img
+          src="/images/hand-up.png"
+          srcset="/images/hand-up@2x.png 2x, /images/hand-up.png 1x"
+          alt=""
+          class="relative -top-[70px]"
+        />
+      </div>
+    </div>
+    <div class="w-[350px] mr-[70px]">
+      <h3 class="font-sans font-bold text-3xl uppercase text-turbo mb-5">
+        There’s more where that came from.
+      </h3>
+      <p class="text-white text-xl leading-relaxed">
+        Subscribe to our newsletter and get immediate access to <span
+          class="text-turbo"
+        >
+          ALL my Productivity Tips and Tricks.</span
+        >
+      </p>
+    </div>
+    <div>
+      <form action="">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <button type="submit">Send it to me</button>
+      </form>
+    </div>
+    <div>
+      <div class="max-w-[1440px] w-full mx-auto">
+        <img
+          src="/images/newsletter-doodles.png"
+          srcset="/images/newsletter-doodles@2x.png 2x, /images/newsletter-doodles.png 1x"
+          alt=""
+          class="relative -top-[100px]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer
+    class="bg-white flex items-center justify-between px-5 lg:px-[90px] pt-[60px] pb-10 relative flex-col lg:flex-row gap-5"
+  >
+    <img
+      src="/images/made-with-love.png"
+      srcset="/images/made-with-love@2x.png 2x, /images/made-with-love.png 1x"
+      alt="Made with Love"
+      class="absolute left-[50px] -top-10"
+    />
+    <div>
+      <p>
+        Copyright &copy; <a href={Constants.AHHA}>Ah Ha Creative, LLC</a>. All
+        Rights Reserved.
+      </p>
+      <p>
+        Licensed under the <a href={Constants.GNU}
+          >GNU Lesser General Public License v3.0</a
+        >
+      </p>
+    </div>
+    <div>
+      <ul class="flex items-center gap-8 text-brightBlue">
+        <li><a href={Constants.TWITTER}><Icon id="x" size={48} /></a></li>
+        <li>
+          <a href={Constants.INSTAGRAM}><Icon id="instagram" size={48} /></a>
+        </li>
+        <li><a href={Constants.BLUESKY}><Icon id="bluesky" size={48} /></a></li>
+        <li><a href={Constants.THREADS}><Icon id="threads" size={48} /></a></li>
+        <li><a href={Constants.EMAIL}><Icon id="email" size={48} /></a></li>
+      </ul>
+    </div>
+  </footer>
 </Layout>
