@@ -1,8 +1,8 @@
 ![WTOTF](./public/images/logo.svg)
 
-The purpose of this site is to be a marketing page and provide documentation for the WTOTF cli tool.
+The purpose of this site is to be a marketing page and provide documentation for the [WTOTF cli tool](https://github.com/ahaywood/wtotf).
 
-Inside of the Astro project, you'll see the following folders and files:
+Inside of the [Astro](https://astro.build) project, you'll see the following folders and files:
 
 ```text
 .
