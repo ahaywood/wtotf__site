@@ -14,12 +14,24 @@ import { Constants } from "../utils/constants";
       (What The OTF)
     </h2>
     <div class="relative inline-block">
-      <img src="/images/scribble--left.png" alt="scribble" class="absolute -left-[300px] top-[45px]" />
+      <img
+        src="/images/scribble--left.png"
+        alt="scribble"
+        class="absolute -left-[300px] top-[45px]"
+      />
       <h1 class="mb-5 inline-block">
         <img src="/images/logo.svg" alt="WTOTF" class="mx-auto" />
       </h1>
-      <img src="/images/astrix.svg" alt="*" class="absolute -right-[125px] -top-[25px]" />
-      <img src="/images/yellow-flower--right.svg" alt="yellow flower" class="absolute -right-[250px] -bottom-[100px]" />
+      <img
+        src="/images/astrix.svg"
+        alt="*"
+        class="absolute -right-[125px] -top-[25px]"
+      />
+      <img
+        src="/images/yellow-flower--right.svg"
+        alt="yellow flower"
+        class="absolute -right-[250px] -bottom-[100px]"
+      />
     </div>
     <h3 class="font-sans font-black text-xl uppercase text-white">
       A <span class="text-turbo">COMMAND LINE TOOL</span> FOR CONVERTING A <span
@@ -60,7 +72,11 @@ import { Constants } from "../utils/constants";
     </div>
     <div class="flex justify-end">
       <div class="relative">
-        <img src="/images/yellow-flower--left.svg" alt="yellow flower" class="absolute -left-[75px] -top-[300px]" />
+        <img
+          src="/images/yellow-flower--left.svg"
+          alt="yellow flower"
+          class="absolute -left-[75px] -top-[300px]"
+        />
         <img
           src="/images/hand-up.png"
           srcset="/images/hand-up@2x.png 2x, /images/hand-up.png 1x"
@@ -82,14 +98,23 @@ import { Constants } from "../utils/constants";
       </p>
     </div>
     <div>
-      <form action="">
+      <form
+        action="https://kwesforms.com/api/foreign/forms/ysHoUD5JimcRMlbonfLP"
+        class="kf-form"
+        data-kw-success-message="Thanks! Be sue to check your inbox!!"
+      >
         <div class="field">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" data-kw-rules="required" />
         </div>
         <div class="field">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            data-kw-rules="required|email"
+          />
         </div>
         <button type="submit">Send it to me</button>
       </form>
