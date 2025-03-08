@@ -28,7 +28,7 @@ label {
 }
 
 input[type="text"], input[type="email"] {
-  @apply font-sans font-bold text-lg w-full outline-none focus:outline-none focus:border-none;
+  @apply font-sans font-bold text-lg w-full !outline-none focus:!outline-none focus:!border-none !border-none;
 }
 
 button[type="submit"] {

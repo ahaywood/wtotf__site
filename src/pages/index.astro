@@ -45,12 +45,15 @@ import { Constants } from "../utils/constants";
   <!-- copy code -->
   <section class="mb-[100px]">
     <CopyCode code="npm install wtotf" client:load="svelte" />
-    <div class="flex items-center justify-center gap-4 relative -right-[50px]">
+    <div
+      class="flex items-center justify-center gap-4 relative md:-right-[50px]"
+    >
       <div>
         <img
           src="/images/code.png"
           srcset="/images/code@2x.png 2x, /images/code.png 1x"
           alt=""
+          class="pt-6 md:pt-0"
         />
       </div>
       <div class="relative -top-[50px] hidden md:block pointer-events-none">
@@ -64,13 +67,15 @@ import { Constants } from "../utils/constants";
   </section>
 
   <!-- newsletter -->
-  <section class="grid grid-cols-[auto_350px_430px_auto] gap-x-[40px]">
-    <div class="col-span-3 col-start-2">
+  <section
+    class="px-5 md:grid md:grid-cols-[1fr_1fr] lg:grid-cols-[auto_350px_430px_auto] gap-x-5 lg:gap-x-[40px] mb-20 xl:mb-0"
+  >
+    <div class="col-span-2 lg:col-span-3 lg:col-start-2">
       <h2 class="font-sans font-black text-turbo uppercase text-[40px] mb-6">
         Looking for More Tools Like This?
       </h2>
     </div>
-    <div class="flex justify-end">
+    <div class="justify-end hidden lg:flex">
       <div class="relative">
         <img
           src="/images/yellow-flower--left.svg"
@@ -85,11 +90,11 @@ import { Constants } from "../utils/constants";
         />
       </div>
     </div>
-    <div class="w-[350px] mr-[70px]">
+    <div class="md:w-[350px] md:mr-[70px]">
       <h3 class="font-sans font-bold text-3xl uppercase text-turbo mb-5">
         There’s more where that came from.
       </h3>
-      <p class="text-white text-xl leading-relaxed">
+      <p class="text-white text-xl leading-relaxed mb-5 md:mb-0">
         Subscribe to our newsletter and get immediate access to <span
           class="text-turbo"
         >
@@ -101,7 +106,7 @@ import { Constants } from "../utils/constants";
       <form
         action="https://kwesforms.com/api/foreign/forms/ysHoUD5JimcRMlbonfLP"
         class="kf-form"
-        data-kw-success-message="Thanks! Be sue to check your inbox!!"
+        data-kw-success-message="Thanks! Be sure to check your inbox!!"
       >
         <div class="field">
           <label for="name">Name</label>
@@ -119,7 +124,7 @@ import { Constants } from "../utils/constants";
         <button type="submit">Send it to me</button>
       </form>
     </div>
-    <div>
+    <div class="hidden lg:block">
       <div class="max-w-[1440px] w-full mx-auto">
         <img
           src="/images/newsletter-doodles.png"
