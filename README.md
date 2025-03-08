@@ -1,4 +1,4 @@
-# WTOTF
+![./public/images/logo.svg]()
 
 The purpose of this site is to be a marketing page and provide documentation for the WTOTF cli tool.
 
