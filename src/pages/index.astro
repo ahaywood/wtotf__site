@@ -7,7 +7,7 @@ import { Constants } from "../utils/constants";
 
 <Layout>
   <header class="text-center mb-20 relative">
-    <a href={Constants.GITHUB} class="absolute right-0 top-0"
+    <a href={Constants.GITHUB} class="hidden sm:block absolute right-0 top-0"
       ><img src="/images/github-corner.svg" alt="GitHub" /></a
     >
     <h2 class="font-sans font-black text-4xl text-turbo uppercase py-4">
@@ -43,7 +43,7 @@ import { Constants } from "../utils/constants";
   </header>
 
   <!-- copy code -->
-  <section class="mb-[100px]">
+  <section class="mb-[100px] px-5 sm:px-0">
     <CopyCode code="npm install wtotf" client:load="svelte" />
     <div
       class="flex items-center justify-center gap-4 relative md:-right-[50px]"
@@ -146,19 +146,19 @@ import { Constants } from "../utils/constants";
       alt="Made with Love"
       class="absolute left-[50px] -top-10"
     />
-    <div>
-      <p>
+    <div class="text-left sm:text-center lg:text-left">
+      <p class="mb-3 sm:mb-0">
         Copyright &copy; <a href={Constants.AHHA}>Ah Ha Creative, LLC</a>. All
         Rights Reserved.
       </p>
-      <p>
+      <p class="mb-3 sm:mb-0">
         Licensed under the <a href={Constants.GNU}
           >GNU Lesser General Public License v3.0</a
         >
       </p>
     </div>
-    <div>
-      <ul class="flex items-center gap-8 text-brightBlue">
+    <div class="mx-5">
+      <ul class="flex gap-4 items-center sm:gap-8 text-brightBlue">
         <li><a href={Constants.TWITTER}><Icon id="x" size={48} /></a></li>
         <li>
           <a href={Constants.INSTAGRAM}><Icon id="instagram" size={48} /></a>

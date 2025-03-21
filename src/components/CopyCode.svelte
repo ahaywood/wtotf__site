@@ -4,7 +4,7 @@
   let isCopied = $state(false);
 </script>
 
-<div class="bg-lightFuchsiaPink font-mono font-bold flex items-center justify-between h-[60px] px-6 w-[470px] mx-auto">
+<div class="bg-lightFuchsiaPink font-mono font-bold flex items-center justify-between h-[60px] px-6 w-full max-w-[470px] mx-auto">
   <pre>{code}</pre>
   <button class="text-brightBlue cursor-pointer" onclick={() => {
     navigator.clipboard.writeText(code);
